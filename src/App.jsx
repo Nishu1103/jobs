@@ -26,7 +26,7 @@ export default function App() {
         const fetchUser = async () => {
             try {
                 const res = await axios.get(
-                    "http://localhost:4000/api/v1/user/getuser ",
+                    "https://job-back-0zbl.onrender.com/api/v1/user/getuser ",
                     {
                         withCredentials: true,
                     }

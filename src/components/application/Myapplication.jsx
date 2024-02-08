@@ -18,14 +18,14 @@ const MyApplications = () => {
   useEffect(() => {
     try {
       if (user && user.role === "jobseeker") {
-        axios.get("http://localhost:4000/api/v1/application/jobseeker/getall", {
+        axios.get("https://job-back-0zbl.onrender.com/api/v1/application/jobseeker/getall", {
             withCredentials: true,
           })
           .then((res) => {
             setApplications(res.data.applications);
           });
       } else {
-        axios.get("http://localhost:4000/api/v1/application/employer/getall", {
+        axios.get("https://job-back-0zbl.onrender.com/api/v1/application/employer/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -44,7 +44,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
+        .delete(`https://job-back-0zbl.onrender.com/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

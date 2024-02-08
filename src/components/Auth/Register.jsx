@@ -175,7 +175,7 @@ const Register = () => {
         onSubmit: async (values) => {
             try {
                 const { data } = await axios.post(
-                    "http://localhost:4000/api/v1/user/register",
+                    "https://job-back-0zbl.onrender.com/api/v1/user/register",
                     values,
                     {
                         headers: {
